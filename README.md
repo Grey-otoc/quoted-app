@@ -1,11 +1,29 @@
 # Quoted
-#### Description:
-My app, Quoted, was written in Swift using the SwiftUI framework. I had no previous, formal experience with Swift but over the month of development on this app, I became quite fond of Swift and iOS development in general. The basic idea for the app came to me when I thought about my reading habits. When I read a book I frequently come across quotes that I'd like to remember and save somewhere, but handwriting or typing them is rather time-consuming. Due to this, I often settle for writing down only the page number of the quote, which can become confusing over time. With that in mind, I thought why not create an app that gives me a place to easily add and organize all my favorite quotes? Unsurprisingly, I wasn't the first to have this idea, but I found the UI of similar apps quite disappointing. So, I tried to take the idea and make it my own visually and functionally by starting with the home screen and expanding from there.
-####
-The home screen uses a card-style display where each book added by the user has its own card with a user-selected color, title, author, page count, favorite button, dates read, and a number to represent the number of quotes added to that book. To keep organized, these cards can easily be sorted by filters, such as title, author, page count, date added, etc., or filtered by selecting a particular collection. Speaking of collections, these are core data entities that store book entities, which allows the user to consolidate and organize their books into different categories. Adding/managing these collections or adding a book can easily be completed using the relevant buttons on the bottom toolbar of the home screen. Each button pulls up another view where I tried to keep the task of adding both books and collections simple and visually appealing.
-####
-If you tap a book card on the home screen, you are then taken to the detail view for that book. This view displays the complete title, author list,  and quotes for that book, and does so with a consistent theme that corresponds to the user-selected color for that book. Each quote also has its own card where the quote itself is front and center and is accompanied by a favorite button and a page number, if the user chose to add one. Similar to the home screen, this view also contains a bottom toolbar with two buttons, one to add a quote and one to edit the book. The add quote button brings you to a view where you can manually write the quote or simply scan an image (or multiple images) for text. When you choose to scan for a quote, you can select an image from your library or take a new image. Once you choose the image, the ability to select text comes up right away and you can make a selection and then add that selection to your quote. From that point, you can choose to add more photos, and more selections, or finish the quote. Once you are finished, you are taken to the write view where you can edit the selection, add a page number, and favorite the quote.
-####
-After adding a quote, you return to the book detail view. Now that you have a quote to display, you will find that you can tap on that quote card and be brought to the quote detail view. In this view, you have the option to edit, delete, or share the quote. I also provided a section to add your thoughts on the quote. Similar to the book detail view, everything is themed based on the user-selected color for the book, so the visual flow between book and quote detail views remains seamless.
-####
-That about sums up the main components of the app. As an overall addition, it is important to note that I paid heavy attention to user flow in this app, which I hope shows when navigating between views and when editing data. Anyways, as one could assume, I went through numerous iterations with this app and, at times, completely reworked particular views and, honestly, discovered how annoying UI development can be when developing for varying screen sizes. However, I thoroughly enjoyed deep diving into a full-scale project. To give a quick explanation of the files in this repository, you will see that everything is separated into relevant folders. "Image Scan Elements" contains all the code for adding and scanning images, "View Elements" contains all the reusable SwiftUI view components that surface in different views of my app, "Views" contains all the actual views, or screens, that are displayed in my app, and "QuotedData" contains the CoreData code used to store user information and establish relationships between my main data entities (books, quotes, and collections). Overall, I had a lot of fun creating this project, am proud of the finished product, and was thrilled to see how quickly you can pick up another language, like Swift, after having a good foundation in other languages.
+
+## Description
+An iOS application that allows users to effortlessly save, organize, and share quotes from books. The app provides a visually engaging, card-based interface to manage books, quotes, and book collections. Users can manually enter quotes or extract them via image scanning using text recognition, with support for marking favorites, adding page numbers, and annotating thoughts on the quote. Quoted emphasizes smooth user flow, responsive SwiftUI views, and modular components for easy extension.
+
+## Features
+- Home screen displays book cards with custom colors, author/title info, page count, reading start and end dates, and number of quotes.
+- Image-based text recognition enables seamless extraction of quotes from photos or scanned pages.
+- Book detail view shows all recorded quotes and their pagecounts, with theming consistent with the book’s selected color.
+- Quote detail view provides a place to edit quotes and jot down annotations about the quote.
+- Supports sorting and filtering of books and collections for efficient organization.
+- Focused on responsive, intuitive navigation and smooth user experience across multiple views.
+
+## Tech Stack
+### Frontend
+- **SwiftUI** — Declarative UI framework for interactive and responsive views
+
+### Backend / Persistence
+- **Swift** — Application logic, orchestration, and view models
+- **Core Data** — Persistent storage and relationship management for books, quotes, and book collections 
+- **VisionKit** - Framework for image-based text extraction
+
+## Lookbook
+### Home Screen
+<p align="center">
+  <img src="screenshots/home1.jpg" />
+  <img src="screenshots/home2.jpg" />
+</p>
+
